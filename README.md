@@ -1,3 +1,3 @@
-# BluetoothStudy
-android 传统蓝牙开发实践，详细开发步骤参考博客：
-http://blog.csdn.net/qiao_jim/article/details/73008695
+# Bluetooth
+android蓝牙透传
+代码的内容是与蓝牙模块进行连接以及数据的读写操作。
