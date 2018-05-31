@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/operate_power_name"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:text="功率等级："
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/operate_power_val"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:entries="@array/power_level" />
+        <Button
+            android:id="@+id/operate_power_btn"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="开始测试"
+            android:background="@color/orange"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/power_prompt"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/operate_frequency_name"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:text="频率等级："
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/operate_frequency_val"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:entries="@array/frequency_level" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/frequency_prompt"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/time_dev_name"
+            android:layout_width="80dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:text="设备时间："
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/operate_time_dev_val"
+            android:layout_width="170dp"
+            android:layout_height="26dp"
+            android:gravity="left"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/operate_time_get_btn"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/orange"
+            android:text="获取时间" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/operate_time_bj_name"
+            android:layout_width="80dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:text="北京时间："
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/operate_time_bj_val"
+            android:layout_width="170dp"
+            android:layout_height="26dp"
+            android:gravity="left"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/operate_time_set_btn"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/orange"
+            android:text="时间同步" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/time_set_prompt"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/operate_time_sleep_name"
+            android:layout_width="80dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:text="睡觉时间："
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+
+        <!--<TimePicker
+            android:id="@+id/operate_time_sleep_val"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minHeight="30dp"
+            android:textSize="12dp"
+            />-->
+        <TextView
+            android:id="@+id/operate_time_sleep_val"
+            android:layout_width="170dp"
+            android:layout_height="26dp"
+            android:gravity="left"
+            android:text="点击设置"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/time_sleep_prompt"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/operate_time_wakeup_name"
+            android:layout_width="80dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:text="起床时间："
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/operate_time_wakeup_val"
+            android:layout_width="170dp"
+            android:layout_height="26dp"
+            android:gravity="left"
+            android:text="点击设置"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/time_wakeup_prompt"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/time_mode_name"
+            android:layout_width="80dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:text="模式选择："
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/operate_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/model_one"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="温和"
+                android:checked="true"
+                android:textColor="@color/radiobutton_textcolor"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/model_two"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="中等"
+                android:textColor="@color/radiobutton_textcolor"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/model_three"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="疯狂"
+                android:textColor="@color/radiobutton_textcolor"
+                android:textSize="14sp" />
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/model_prompt"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="100dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:layout_margin="5dp">
+
+        <Button
+            android:id="@+id/operate_confirm_btn"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="确定"
+            android:background="@color/orange"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">潜行头巾</string>
+    <string name="title">未连接设备</string>
+
+    <string-array name="spingarr">
+        <item>正玄波</item>
+        <item>方波</item>
+        <item>三角波</item>
+    </string-array>
+
+    <string-array name="power_level">
+        <item>一级</item>
+        <item>二级</item>
+        <item>三级</item>
+        <item>四级</item>
+        <item>五级</item>
+        <item>六级</item>
+        <item>七级</item>
+        <item>八级</item>
+        <item>九级</item>
+        <item>十级谨慎选择!!!</item>
+    </string-array>
+
+    <string-array name="frequency_level">
+        <item>5HZ</item>
+        <item>10HZ</item>
+        <item>15HZ</item>
+        <item>20HZ</item>
+        <item>25HZ</item>
+        <item>30HZ</item>
+        <item>35HZ</item>
+        <item>40HZ</item>
+        <item>45HZ</item>
+        <item>50HZ</item>
+        <item>55HZ</item>
+        <item>60HZ</item>
+        <item>65HZ</item>
+        <item>75HZ</item>
+        <item>80HZ</item>
+        <item>85HZ</item>
+        <item>90HZ</item>
+        <item>95HZ</item>
+        <item>100HZ</item>
+    </string-array>
+
+    <string-array name="time_hour">
+        <item>00</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+    </string-array>
+
+    <string-array name="time_minute">
+        <item>00</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+    </string-array>
+    
+    <string name="power_prompt">使用前请清洗皮肤与头巾电极，再选择等级从低到高，八级请谨慎选择，感受到电流并无危险性，选择自己承受范围内的等级大小，开始测试后记得要关闭测试。</string>
+    <string name="frequency_prompt">推荐频率25HZ与40HZ，还可以根据自身情况选择适合自己频率。</string>
+    <string name="time_set_prompt">每次使用都需要获取并查看设备时间。</string>
+    <string name="time_sleep_prompt">设备会在选择的睡觉时间后1小时启动。</string>
+    <string name="time_wakeup_prompt">彻底醒来的时间。</string>
+    <string name="model_prompt">根据自身精神状况选择模式。</string>
+</resources>

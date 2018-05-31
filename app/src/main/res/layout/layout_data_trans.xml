@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextView
+        android:id="@+id/device_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/orange"
+        android:gravity="center"
+        android:text="还未连接任何设备"
+        android:textColor="@android:color/black" />-->
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/wave_name"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:text="波形"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/spinner"
+            android:entries="@array/spingarr" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/rate_name"
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:text="频率"
+            android:textStyle="bold"/>
+
+        <SeekBar
+            android:id="@+id/rate_val"
+            android:layout_width="274dp"
+            android:layout_height="28dp"
+            android:maxHeight="5.0dp"
+            android:minHeight="5.0dp"
+            android:max="100"
+            android:progress="30"
+            android:progressDrawable="@drawable/sb_bar"
+            android:thumb="@drawable/sb_thumb"/>
+        <TextView
+            android:id="@+id/rate_show"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="30"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/power_name"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="功率"
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/power_val"
+            android:layout_width="274dp"
+            android:layout_height="30dp"
+            android:maxHeight="5.0dp"
+            android:minHeight="5.0dp"
+            android:max="100"
+            android:progress="30"
+            android:progressDrawable="@drawable/sb_bar"
+            android:thumb="@drawable/sb_thumb"/>
+        <TextView
+            android:id="@+id/power_show"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="30"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/time_name"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:text="时间"
+            android:textStyle="bold"/>
+
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:id="@+id/time_val_hour"
+            android:textSize="13dp"
+            android:text="00"
+            android:hint="BetterSpinner" />
+        <TextView
+            android:id="@+id/time_hour0"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="时"
+            android:textStyle="bold"/>
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:id="@+id/time_val_minute"
+            android:textSize="13dp"
+            android:text="00"
+            android:hint="BetterSpinner" />
+        <TextView
+            android:id="@+id/time_minute0"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="分"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/modify_time_bt"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="修改时间"
+            android:background="@color/orange"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/timer_one_name"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:text="定时1"
+            android:textStyle="bold"/>
+
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:id="@+id/timer_one_val_hour"
+            android:entries="@array/time_hour"
+            android:textSize="13dp"
+            android:text="00"
+            android:hint="BetterSpinner" />
+        <TextView
+            android:id="@+id/timer_one_hour"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="时"
+            android:textStyle="bold"/>
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:id="@+id/timer_one_val_minute"
+            android:entries="@array/time_minute"
+            android:textSize="13dp"
+            android:text="00"
+            android:hint="BetterSpinner" />
+        <TextView
+            android:id="@+id/timer_one_minute"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="分"
+            android:textStyle="bold"/>
+        <Switch
+            android:id="@+id/timer_one_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="20dp"
+            android:textOn="on"
+            android:textOff="off"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/timer_two_name"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:text="定时2"
+            android:textStyle="bold"/>
+
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:id="@+id/timer_two_val_hour"
+            android:entries="@array/time_hour"
+            android:textSize="13dp"
+            android:text="00"
+            android:hint="BetterSpinner" />
+        <TextView
+            android:id="@+id/timer_two_hour"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="时"
+            android:textStyle="bold"/>
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:id="@+id/timer_two_val_minute"
+            android:entries="@array/time_minute"
+            android:textSize="13dp"
+            android:text="00"
+            android:hint="BetterSpinner" />
+        <TextView
+            android:id="@+id/timer_two_minute"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="分"
+            android:textStyle="bold"/>
+        <Switch
+            android:id="@+id/timer_two_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="20dp"
+            android:textOn="on"
+            android:textOff="off"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/timer_three_name"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:text="定时3"
+            android:textStyle="bold"/>
+
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:id="@+id/timer_three_val_hour"
+            android:entries="@array/time_hour"
+            android:textSize="13dp"
+            android:text="00"
+            android:hint="BetterSpinner" />
+        <TextView
+            android:id="@+id/timer_three_hour"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="时"
+            android:textStyle="bold"/>
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:id="@+id/timer_three_val_minute"
+            android:entries="@array/time_minute"
+            android:textSize="13dp"
+            android:text="00"
+            android:hint="BetterSpinner" />
+        <TextView
+            android:id="@+id/timer_three_minute"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="分"
+            android:textStyle="bold"/>
+        <Switch
+            android:id="@+id/timer_three_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="20dp"
+            android:textOn="on"
+            android:textOff="off"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/timer_four_name"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:text="定时4"
+            android:textStyle="bold"/>
+
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:id="@+id/timer_four_val_hour"
+            android:entries="@array/time_hour"
+            android:textSize="13dp"
+            android:text="00"
+            android:hint="BetterSpinner" />
+        <TextView
+            android:id="@+id/timer_four_hour"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="时"
+            android:textStyle="bold"/>
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:id="@+id/timer_four_val_minute"
+            android:entries="@array/time_minute"
+            android:textSize="13dp"
+            android:text="00"
+            android:hint="BetterSpinner" />
+        <TextView
+            android:id="@+id/timer_four_minute"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="分"
+            android:textStyle="bold"/>
+        <Switch
+            android:id="@+id/timer_four_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="20dp"
+            android:textOn="on"
+            android:textOff="off"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/timer_five_name"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:text="定时5"
+            android:textStyle="bold"/>
+
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:id="@+id/timer_five_val_hour"
+            android:entries="@array/time_hour"
+            android:textSize="13dp"
+            android:text="00"
+            android:hint="BetterSpinner" />
+        <TextView
+            android:id="@+id/timer_five_hour"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="时"
+            android:textStyle="bold"/>
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:id="@+id/timer_five_val_minute"
+            android:entries="@array/time_minute"
+            android:textSize="13dp"
+            android:text="00"
+            android:hint="BetterSpinner" />
+        <TextView
+            android:id="@+id/timer_five_minute"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue"
+            android:gravity="left"
+            android:text="分"
+            android:textStyle="bold"/>
+        <Switch
+            android:id="@+id/timer_five_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="20dp"
+            android:textOn="on"
+            android:textOff="off"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="100dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:layout_margin="5dp">
+
+        <!--<EditText
+            android:id="@+id/input_et"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />-->
+        <Button
+            android:id="@+id/send_bt"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="写入参数"
+            android:background="@color/orange"/>
+    </LinearLayout>
+
+</LinearLayout>
